@@ -41,7 +41,7 @@ module.exports = {
         selectText: '语言',
         nav: [
           { text: '指南', link: '/' },
-          { text: '文档', link: `/${kebabCase('useSize')}/` },
+          // { text: '文档', link: `/${kebabCase('useSize')}/` },
         ],
         sidebar: getRouterConfig('/zh/'),
       },

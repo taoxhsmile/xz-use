@@ -33,7 +33,7 @@ function useControllableValue<T = any>(
     trigger = 'update:modelValue',
   } = options;
 
-  const { proxy } = getCurrentInstance();
+  const { proxy } = getCurrentInstance()!;
 
   const innerValue = ref<T>();
 
@@ -56,7 +56,7 @@ function useControllableValue<T = any>(
       if (!(valuePropName in props)) {
         innerValue.value = value;
       }
-      proxy.$emit(trigger, value);
+      proxy?.$emit(trigger, value);
     },
   });
 

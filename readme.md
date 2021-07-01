@@ -7,12 +7,9 @@ Most hooks implementation is original ported from [ahooks](https://ahooks.js.org
 ## Document
 
 - [中文](https://taoxhsmile.github.io/xz-use/zh/)
-- [English](https://taoxhsmile.github.io/xz-use/)
 
 ## Features
 
-- Easy to learn and use.
-- Works for both Vue 3 and 2 ( thanks for [vue-demi](https://github.com/antfu/vue-demi) ).
 - Written in TypeScript with predictable static types.
 
 ## Install
@@ -24,7 +21,7 @@ yarn add xz-use
 ## Usage
 
 ```
-import { useWorkerFunction } from 'xz-use';
+import { useRequest } from 'xz-use';
 ```
 
 ## Contributing
