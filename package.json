@@ -1,0 +1,86 @@
+{
+  "name": "xz-use",
+  "version": "0.0.1",
+  "description": "xz-use",
+  "types": "dist/src/index.d.ts",
+  "repository": "https://github.com/taoxhsmile/xz-use.git",
+  "author": "dewfall",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/xz-use.umd.js",
+  "module": "./dist/xz-use.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/xz-use.es.js",
+      "require": "./dist/xz-use.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vitepress-fc dev docs",
+    "build": "vite build && yarn type",
+    "type": "tsc -d",
+    "test": "jest",
+    "docs-build": "rimraf docs/dist && cross-env NODE_ENV=production vitepress-fc build --root=docs",
+    "docs-serve": "cross-env NODE_ENV=production vitepress-fc serve --root=docs",
+    "docs-build-serve": "cross-env NODE_ENV=true yarn docs-build && yarn docs-serve",
+    "docs-deploy": "gh-pages -d docs/dist -t true",
+    "docs-build-deploy": "yarn docs-build && yarn docs-deploy",
+    "pub": "yarn build && lerna publish",
+    "lint": "eslint --ignore-pattern **/__tests__/* --ignore-pattern **/dist/* \"src/**/*.{vue,js,ts,tsx}\"",
+    "lint-fix": "npm run lint -- --fix",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "release": "np"
+  },
+  "keywords": [
+    "xz-use",
+    "ahooks",
+    "vue",
+    "vue3",
+    "hooks",
+    "vue-use",
+    "vue-hooks"
+  ],
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "@types/lodash": "^4.14.159",
+    "@types/whatwg-fetch": "^0.0.33",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "axios": "^0.21.1",
+    "conventional-changelog-cli": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.18.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "gh-pages": "^3.1.0",
+    "intersection-observer": "^0.12.0",
+    "jest": "^25.1.0",
+    "localforage": "^1.9.0",
+    "lodash-es": "^4.17.20",
+    "mockjs": "^1.1.0",
+    "np": "^7.4.0",
+    "prettier": "^1.19.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "screenfull": "^5.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^4.1.5",
+    "vitepress-for-component": "^0.14.4",
+    "vue": "^3.0.1",
+    "whatwg-fetch": "^3.5.0"
+  },
+  "homepage": "https://taoxhsmile.github.io/xz-use/",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "peerDependencies": {
+    "axios": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
