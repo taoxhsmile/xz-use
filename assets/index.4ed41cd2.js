@@ -1,1 +1,0 @@
-import{f as t}from"./app.23e4df7f.js";function e(e=!1,o){const s=t(e),a=t=>{s.value=t},f=void 0===o?!e:o;return{state:s,toggle:t=>{void 0===t&&(t=s.value===e?f:e),a(t)},setLeft:()=>{a(e)},setRight:()=>{a(f)}}}export{e as u};
