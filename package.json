@@ -1,6 +1,6 @@
 {
   "name": "xz-use",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "xz-use",
   "types": "dist/src/index.d.ts",
   "repository": "https://github.com/taoxhsmile/xz-use.git",
