@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { useRequest, UseRequestOptions } from '../index';
+import { useRequest, UseRequestOptions } from '../useRequest';
 import { UseAxiosParams } from './types';
 
 export function useAxios<R = any, P extends any[] = any>(
