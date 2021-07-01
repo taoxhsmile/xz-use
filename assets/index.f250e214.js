@@ -1,1 +1,0 @@
-import{k as t,f as a,l as e,j as l}from"./app.1d88cb5e.js";function o(o,u){var n;let r;r="function"==typeof o?t(o):o;const s=a(r.value),f=e.throttle((()=>{s.value=r.value}),null!=(n=null==u?void 0:u.wait)?n:1e3,u);return l(r,f),s}export{o as u};
