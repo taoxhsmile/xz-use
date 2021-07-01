@@ -15,14 +15,14 @@ interface StandardProps<T> {
   modelValue: T;
   defaultValue?: T;
 }
-function useControllableValue<T = any>(
+export function useControllableValue<T = any>(
   props: StandardProps<T>,
 ): WritableComputedRef<T>;
-function useControllableValue<T = any>(
+export function useControllableValue<T = any>(
   props?: Props,
   options?: Options<T>,
 ): WritableComputedRef<T>;
-function useControllableValue<T = any>(
+export function useControllableValue<T = any>(
   props: Props = {},
   options: Options<T> = {},
 ) {
@@ -62,5 +62,3 @@ function useControllableValue<T = any>(
 
   return state;
 }
-
-export default useControllableValue;
